@@ -16,14 +16,14 @@ export default function App(){
   }
 
   return(
-    <div id="container">
+    <div className="container">
       <Headline/>
 
-      <div id="button">
+      <div className="buttonContainer">
         <Button onClick={handleClick}>Количество кликов: {count}</Button> 
       </div>
 
-      <div id="delete-button">
+      <div className="closeContainer">
         <CloseButton deleteClick={deleteCount}>Обнулить счетчик кликов</CloseButton>
       </div>
     </div>
