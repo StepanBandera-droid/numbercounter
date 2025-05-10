@@ -1,22 +1,23 @@
-import { useState } from 'react'
 import './App.css'
 
 import Headline from './components/Headline'
-import Button from './components/Button'
-import CloseButton from './components/CloseButton'
+import Button from './components/Button/Button'
+import CloseButton from './components/CloseButton/CloseButton'
 
 export default function App(){
   return(
-    <div>
+    <div id="container">
       <Headline/>
-      
-      <div>
+
+      <div id="button">
         <Button />
       </div>
 
-      <div>
+      <div id="delete-button">
         <CloseButton/>
       </div>
     </div>
   )
 }
+
+
