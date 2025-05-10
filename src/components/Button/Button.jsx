@@ -2,8 +2,11 @@ import './Button.css'
 
 export let number = 0;
 
-export default function Button(){
+export default function Button({children, onClick}){
+
     return(
-        <button>{"Count click: "+number}</button>
+        <button className='button' onClick={onClick}>
+            {children}
+        </button>
     )
 }

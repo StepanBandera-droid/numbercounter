@@ -1,7 +1,9 @@
 import './CloseButton.css'
 
-export default function CloseButton(){
+export default function CloseButton({children, deleteClick}){
     return(
-        <button>{"Delete count"}</button>
+        <button className='close-button' onClick={deleteClick}>
+            {children}
+        </button>
     )
 }
