@@ -2,17 +2,27 @@ import './App.css'
 import Headline from './components/Headline'
 import Button from './components/Button/Button'
 import CloseButton from './components/CloseButton/CloseButton'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 export default function App(){
   const [count, setCount] = useState(0);
-
+  
+  useEffect(() => {
+    const savedCount = localStorage.getItem('clickCount'); // Получаем сохраненное значение
+    if (savedCount !== null) {
+        setCount(Number(savedCount)); // Устанавливаем его в состояние, если оно существует
+    }
+},);
+ 
   function handleClick(){
-    setCount((count)=> count + 1 )
+    const newCount = count + 1;
+    setCount(newCount);
+    localStorage.setItem('clickCount', newCount);
   }
 
   function deleteCount(){
-    setCount((count)=> 0)
+    setCount(0);
+    localStorage.removeItem('clickCount');
   }
 
   return(

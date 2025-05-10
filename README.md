@@ -1,0 +1,1 @@
+#Click counter is a program that counts every time a person presses a button and adds it to the total number of clicks.
