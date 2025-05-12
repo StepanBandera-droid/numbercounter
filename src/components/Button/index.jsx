@@ -1,9 +1,11 @@
 import "./styles.css";
 
-export default function Button({ children, onClick }) {
+const Button = ({ onClick }) => {
   return (
     <button className="button" onClick={onClick}>
-      {children}
+      Click
     </button>
   );
-}
+};
+
+export default Button;

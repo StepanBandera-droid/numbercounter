@@ -9,3 +9,13 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.text-button {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 4px;
+  margin: 3px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  background-color: white;
+}

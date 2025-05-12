@@ -4,7 +4,7 @@ import CloseButton from "../CloseButton";
 import { useState, useEffect } from "react";
 import "./styles.css";
 
-export default function App() {
+const App = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -13,24 +13,24 @@ export default function App() {
       setCount(Number(savedCount));
     }
   }, []);
-
-  function handleClick() {
+  const handleClick = () => {
     const newCount = count + 1;
     setCount(newCount);
     localStorage.setItem("clickCount", newCount);
-  }
+  };
 
-  function deleteCount() {
+  const deleteCount = () => {
     setCount(0);
     localStorage.removeItem("clickCount");
-  }
+  };
 
   return (
     <div className="container">
       <Header />
 
       <div className="button-container">
-        <Button onClick={handleClick}>Количество кликов: {count}</Button>
+        <Button onClick={handleClick} />
+        <p className="text-button">Количество кликов: {count}</p>
       </div>
 
       <div className="close-container">
@@ -38,4 +38,6 @@ export default function App() {
       </div>
     </div>
   );
-}
+};
+
+export default App;
