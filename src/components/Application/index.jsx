@@ -12,7 +12,7 @@ const App = () => {
     if (savedCount !== null) {
       setCount(Number(savedCount));
     }
-  }, []);
+  });
   const handleClick = () => {
     const newCount = count + 1;
     setCount(newCount);
